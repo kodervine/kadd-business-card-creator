@@ -4,15 +4,78 @@
   box-sizing: border-box;
 }
 
-/* body {
+:root {
+  --sky-blue-color: rgb(115, 218, 255); 
+  --dark-blue-color: rgb(67, 67, 102);
+}
 
-} */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark-blue-color);
+}
 
 .header {
   text-align: center;
 }
 
-/* Form */
-.form > div {
+
+/* Card proper */
+.card-container {
+  width: 388px;
+  height: 248px;
+  border: 2px solid var(--dark-blue-color);
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 15px 0 15px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase; 
+}
+
+.company-name {
+  font-weight: bold;
+}
+
+.card-header span {
+  font-size: 10px;
+}
+
+.card-header img {
+  width: 60px;
+}
+
+.person-name {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.person-name span {
+  font-size: 14px;
+}
+
+.phone-number,
+.email-address,
+.address {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 5px;
+}
+
+.phone-number i,
+.email-address i,
+.address i {
+  color: var(--sky-blue-color);
+  border: 1px solid var(--sky-blue-color);
+  padding: 3px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+.address i {
+  padding: 5px;
 }
