@@ -21,7 +21,7 @@ body {
 }
 
 .form {
-  width: 80%;
+  width: 40%;
   border: 2px solid grey;
   margin: auto;
   padding: 30px;
@@ -40,6 +40,7 @@ body {
   padding: 8px 0 5px 0;
   margin: 5px 0 5px 0;
   outline: none;
+  background-color: transparent;
 }
 
 .form-div input:focus {
@@ -49,7 +50,8 @@ body {
 }
 
 /* Button */
-.create-card {
+.create-card,
+.create-another-card {
   padding: 15px;
   border-radius: 5px;
   cursor: pointer;
@@ -63,10 +65,24 @@ body {
   margin-bottom: 20px;
 }
 
-.create-card:hover {
+.create-card:hover,
+.create-another-card {
   transition: 0.5s ease-in;
   box-shadow: 0 0 10px var(--grey-box-shadow);
   transform: scale(1.07);
+}
+
+/* Red alert */
+.red-alert {
+  position: sticky;
+  top: 50%;
+  background-color: red;
+  color: white;
+  width: 40%;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+  font-size: 25px;
 }
 
 /* Card proper */
@@ -147,4 +163,15 @@ body {
 
 .display-none {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 80%;
+  }
+
+  .red-alert {
+    width: 80%;
+    font-size: 16px;
+  }
 }
