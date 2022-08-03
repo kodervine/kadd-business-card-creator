@@ -49,6 +49,16 @@ body {
   border-radius: 8px;
 }
 
+/* Number length and validation */
+.valid-phone-num,
+.phone-num-length,
+.valid-email-address {
+  font-size: 13px;
+  padding-top: 3px;
+  margin: 2px;
+  color: red;
+}
+
 /* Button */
 .create-card,
 .create-another-card {
