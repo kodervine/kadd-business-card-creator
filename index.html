@@ -11,11 +11,16 @@
 <body>
   <header class="header">
     <h1>Kadd</h1>
+    <p>Create your customized business cards in seconds</p>
   </header>
 
   <main>
     <section class="red-alert display-none">
-      <p>Please fill in the forms to continue</p>
+      <p >Please fill in the forms to continue</p>
+    </section>
+
+    <section class="display-none refresh-page">
+      <p>Please refresh page to create another card</p>
     </section>
     <!-- Form -->
     <form class="form">
@@ -59,6 +64,12 @@
       <button class="create-card">create card</button>
     </section>
     
+    <!-- Customize colors -->
+    <section class="color-container">
+      <h3>Customize Card Color</h3>
+      <p>Choose a color and click on the business card to change color</p>
+      <input type="color" name="color" id="select-color">
+    </section>
 
     <!-- Section -->
     <article class="card-container">
@@ -88,7 +99,7 @@
     </article>
   </main>
   <section>
-    <button class="create-another-card">create another card</button>
+    <button class="create-another-card">Recreate card</button>
   </section>
  
   <script src="/main.js"></script>
