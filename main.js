@@ -15,6 +15,17 @@ const phoneNumber = document.querySelector('.phone-number');
 const emailAddress = document.querySelector('.email-address');
 const companyAddress = document.querySelector('.address')
 
+// Color and card container
+const cardContainer = document.querySelector('.card-container');
+const colorContainer = document.querySelector('.color-container');
+
+// Windows loaded
+document.addEventListener('DOMContentLoaded', () => {
+  colorContainer.classList.add('display-none');
+  // cardContainer.classList.add("display-none");
+  recreateCard.classList.add('display-none');
+})
+
 
 // Validate number
 const validPhoneNumber = document.querySelector('.valid-phone-num');
@@ -44,13 +55,14 @@ formPhoneNumber.addEventListener('keyup', ()=>{
 })
 
 // Validate email address
+// ======================
 const validEmailAddress = document.querySelector('.valid-email-address');
 
 function validateEmail(email) {
   const validation = /^[^\$@]+@[^\$@]+[^\$@]+$/;
   if (validation.test(email.value) === true) {
     validEmailAddress.classList.add('display-none')
-    // return true;  
+    return true;  
   } else {
     validEmailAddress.classList.remove('display-none')
   }
@@ -73,19 +85,23 @@ function addToCard(formInput, appendText){
   }
 
   // Make sure nothing is in text before adding anything
+  const refreshPage = document.querySelector('.refresh-page');
   if (appendText.innerText !== ''){
     appendText.appendChild = 'none'
     formInput.value = '';
+    // Alert to refresh page
+    refreshPage.classList.remove('display-none');
+    appendText.value = '';
 
-    // Create another form here
-    // ============================
-    // ===========================
-
+    // Remove red alert
+    setTimeout(() => {
+      refreshPage.classList.add('display-none');
+    }, 1000);
   } else {
     // Add input value to an element
     const createParagraph = document.createElement('p');
     createParagraph.innerText = formInput.value;
-
+    
     appendText.appendChild(createParagraph);
     formInput.value = '';
   }
@@ -101,4 +117,21 @@ createCard.addEventListener('click', ()=> {
   addToCard(formPhoneNumber, phoneNumber);
   addToCard(formEmailAddress, emailAddress);
   addToCard(formOfficeAddress, companyAddress);
+})
+
+// Create another card
+const recreateCard = document.querySelector('.create-another-card')
+// ==================================
+// For the other button
+
+
+
+// Edit card color
+const selectThemeColor = document.getElementById('select-color')
+// Event listener
+cardContainer.addEventListener('click', () => {
+  colorContainer.classList.remove('display-none')
+  const rootVariables = document.querySelector(':root');
+  rootVariables.style.setProperty('--card-sky-blue-color', selectThemeColor.value);
+  rootVariables.style.setProperty('--card-dark-blue-color', selectThemeColor.value);
 })
