@@ -23,7 +23,7 @@ const colorContainer = document.querySelector('.color-container');
 document.addEventListener('DOMContentLoaded', () => {
   colorContainer.classList.add('display-none');
   // cardContainer.classList.add("display-none");
-  recreateCard.classList.add('display-none');
+  // recreateCard.classList.add('display-none');
 })
 
 
@@ -127,11 +127,19 @@ const recreateCard = document.querySelector('.create-another-card')
 
 
 // Edit card color
-const selectThemeColor = document.getElementById('select-color')
+const selectThemeColor = document.getElementById('select-color');
+const displayCustomizeText = document.querySelector('.click-card-info')
 // Event listener
 cardContainer.addEventListener('click', () => {
-  colorContainer.classList.remove('display-none')
+  colorContainer.classList.remove('display-none');
+  displayCustomizeText.classList.add('display-none');
   const rootVariables = document.querySelector(':root');
   rootVariables.style.setProperty('--card-sky-blue-color', selectThemeColor.value);
   rootVariables.style.setProperty('--card-dark-blue-color', selectThemeColor.value);
+})
+
+// download card
+const downloadCard = document.querySelector('.download-card');
+downloadCard.addEventListener('click', ()=>{
+
 })

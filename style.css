@@ -67,7 +67,8 @@ body {
 
 /* Button */
 .create-card,
-.create-another-card {
+.create-another-card,
+.download-card {
   padding: 15px;
   border-radius: 5px;
   cursor: pointer;
@@ -81,8 +82,14 @@ body {
   margin-bottom: 20px;
 }
 
+.download-card {
+  margin: auto;
+  margin-left: 20px;
+}
+
 .create-card:hover,
-.create-another-card {
+.create-another-card:hover,
+.download-card:hover {
   transition: 0.5s ease-in;
   box-shadow: 0 0 10px var(--grey-box-shadow);
   transform: scale(1.07);
@@ -116,6 +123,12 @@ body {
 }
 
 /* Card proper */
+.click-card-info {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
 .card-container {
   width: 388px;
   height: 248px;
@@ -125,7 +138,7 @@ body {
   justify-content: space-evenly;
   padding: 0 15px 0 15px;
   margin: auto;
-  background-image: url(/images/kadd-logo.png);
+  background-image: url(/images/kadd-logo-transparent.png);
   background-repeat: no-repeat;
   background-position: bottom right;
   cursor: pointer;

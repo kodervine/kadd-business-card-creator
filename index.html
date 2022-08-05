@@ -67,12 +67,13 @@
     <!-- Customize colors -->
     <section class="color-container">
       <h3>Customize Card Color</h3>
-      <p>Choose a color and click on the business card to change color</p>
+      <p>Choose a color below and click on the business card to customize</p>
       <input type="color" name="color" id="select-color">
     </section>
 
     <!-- Section -->
-    <article class="card-container">
+    <p class="click-card-info">Click on card to customize</p>
+    <article class="card-container" id="download-card">
       <div class="card-header">
         <img src="/images/kadd-logo.png" alt="logo image here">
         <p class="company-name"></p>
@@ -98,8 +99,9 @@
       </div>
     </article>
   </main>
-  <section>
+  <section class="down-button">
     <button class="create-another-card">Recreate card</button>
+    <button class="download-card">Download card</button>
   </section>
  
   <script src="/main.js"></script>
