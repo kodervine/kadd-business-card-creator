@@ -9,7 +9,7 @@
   --dark-blue-color: rgb(67, 67, 102);
   --card-sky-blue-color: rgb(115, 218, 255); 
   --card-dark-blue-color: rgb(67, 67, 102);
-  --grey-color: grey;
+  --grey-color: rgb(168, 164, 164);
   --grey-box-shadow: rgb(179, 175, 175);
 }
 
@@ -66,6 +66,12 @@ body {
 }
 
 /* Button */
+.create-card-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .create-card,
 .create-another-card,
 .download-card {
@@ -77,14 +83,14 @@ body {
   background-color: var(--grey-color);
   border: 2px solid var(--grey-color);
   color: white;
-  margin-left: 45%;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.download-card {
-  margin: auto;
-  margin-left: 20px;
+.download-card,
+.create-another-card {
+  margin: 0;
+  /* margin-left: 20px; */
 }
 
 .create-card:hover,
@@ -93,6 +99,12 @@ body {
   transition: 0.5s ease-in;
   box-shadow: 0 0 10px var(--grey-box-shadow);
   transform: scale(1.07);
+}
+
+.down-button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* Red alert */
@@ -217,10 +229,5 @@ body {
   .refresh-page {
     width: 80%;
     font-size: 16px;
-  }
-
-.create-card,
-.create-another-card {
-  margin-left: 35%;
   }
 }
