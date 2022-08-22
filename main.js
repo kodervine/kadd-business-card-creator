@@ -1,4 +1,7 @@
 // Define global variable
+const formContainer = document.querySelector('.form')
+
+// Forms input
 const formFullName = document.getElementById('full-name');
 const formJobTitle = document.getElementById('job-title');
 const formCompanyName = document.getElementById('company-name');
@@ -64,7 +67,7 @@ function validateEmail(email) {
     validEmailAddress.classList.add('display-none')
     return true;  
   } else {
-    validEmailAddress.classList.remove('display-none')
+    // validEmailAddress.classList.remove('display-none')
   }
 }
 
@@ -82,35 +85,40 @@ function addToCard(formInput, appendText){
     setTimeout(() => {
       redAlert.classList.add('display-none');
     }, 1000);
-  }
+  } 
 
   // Make sure nothing is in text before adding anything
-  const refreshPage = document.querySelector('.refresh-page');
+  const refreshPageAlert = document.querySelector('.refresh-page');
   if (appendText.innerText !== ''){
     appendText.appendChild = 'none'
     formInput.value = '';
     // Alert to refresh page
-    refreshPage.classList.remove('display-none');
+    refreshPageAlert.classList.remove('display-none');
     appendText.value = '';
+    formContainer.classList.remove('display-none')
 
     // Remove red alert
     setTimeout(() => {
-      refreshPage.classList.add('display-none');
+      refreshPageAlert.classList.add('display-none');
     }, 1000);
   } else {
-    // Add input value to an element
+    // Add form input value to the card itself
     const createParagraph = document.createElement('p');
     createParagraph.innerText = formInput.value;
     
     appendText.appendChild(createParagraph);
     formInput.value = '';
-  }
-  
+
+    // Hide the form after the create card button is clicked === currently affecting the whole form whether the input is clear
+     formContainer.classList.add('display-none');
+     createCard.classList.add('display-none')
+  } 
 }
 
-// Create card
+// Create card button after form input
 const createCard = document.querySelector('.create-card');
 createCard.addEventListener('click', ()=> {
+
   addToCard(formFullName, personName);
   addToCard(formCompanyName, companyName);
   addToCard(formJobTitle, jobTitle);
@@ -120,11 +128,10 @@ createCard.addEventListener('click', ()=> {
 })
 
 // Create another card
-const recreateCard = document.querySelector('.create-another-card')
-// ==================================
-// For the other button
-
-
+const recreateCard = document.querySelector('.create-another-card');
+recreateCard.addEventListener('click', ()=> {
+  document.location.reload()
+})
 
 // Edit card color
 const selectThemeColor = document.getElementById('select-color');
@@ -138,8 +145,16 @@ cardContainer.addEventListener('click', () => {
   rootVariables.style.setProperty('--card-dark-blue-color', selectThemeColor.value);
 })
 
-// download card
+// convert the input value and convert to png
+// ========Comments ====================
+// =====================================
+// The data url works just that I have to find a way to add the html elements inside the canvas element, as canvas does not accept any html elements at the moment
+
 const downloadCard = document.querySelector('.download-card');
 downloadCard.addEventListener('click', ()=>{
 
+  const dataURL = cardContainer.toDataURL()
+  const imgConverted = document.getElementById('imgConverted')
+  imgConverted.src = dataURL
+  console.log(dataURL)
 })
