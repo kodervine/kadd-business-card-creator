@@ -8,6 +8,7 @@ const formCompanyName = document.getElementById("company-name");
 const formPhoneNumber = document.getElementById("phone-number");
 const formEmailAddress = document.getElementById("email-address");
 const formOfficeAddress = document.getElementById("office-address");
+const myPhoto = document.getElementById("my-photo");
 
 // CardItself
 const companyName = document.querySelector(".company-name");
@@ -17,18 +18,21 @@ const phoneNumber = document.querySelector(".phone-number");
 const emailAddress = document.querySelector(".email-address");
 const companyAddress = document.querySelector(".address");
 
-// Color and card container
+// To change the card Color and card container
 const cardContainer = document.querySelector(".card-container");
 const colorContainer = document.querySelector(".color-container");
 
 // Windows loaded
+const customizeCard = document.querySelector(".click-card-info");
 document.addEventListener("DOMContentLoaded", () => {
   colorContainer.classList.add("display-none");
   // cardContainer.classList.add("display-none");
-  // recreateCard.classList.add('display-none');
+  // recreateCard.classList.add("display-none");
+  // downloadCard.classList.add("display-none");
+  // customizeCard.classList.add("display-none");
 });
 
-// Validate number
+// Validate number on the form
 const validPhoneNumber = document.querySelector(".valid-phone-num");
 const phoneNumberLength = document.querySelector(".phone-num-length");
 // Add event listener
@@ -73,7 +77,7 @@ validateEmail(formEmailAddress);
 
 // Add to business card
 function addToCard(formInput, appendText) {
-  // // Authentication of empty input
+  // Authentication of empty input
   if (formInput.value === "") {
     const redAlert = document.querySelector(".red-alert");
     redAlert.classList.remove("display-none");
@@ -110,6 +114,11 @@ function addToCard(formInput, appendText) {
     // Hide the form after the create card button is clicked === currently affecting the whole form whether the input is clear
     formContainer.classList.add("display-none");
     createCard.classList.add("display-none");
+    // colorContainer.classList.remove("display-none");
+    // cardContainer.classList.remove("display-none");
+    // recreateCard.classList.remove("display-none");
+    // downloadCard.classList.remove("display-none");
+    // customizeCard.classList.remove("display-none");
   }
 }
 
@@ -124,10 +133,23 @@ createCard.addEventListener("click", () => {
   addToCard(formOfficeAddress, companyAddress);
 });
 
-// Create another card
+// Create another business card bittons
 const recreateCard = document.querySelector(".create-another-card");
 recreateCard.addEventListener("click", () => {
   document.location.reload();
+});
+
+let imgUploader = "";
+
+// Allows you to upload your image
+const cardPhotoSpot = document.querySelector(".card-header");
+myPhoto.addEventListener("change", function () {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    imgUploader = reader.result;
+    document.querySelector("#person-img").src = `${imgUploader}`;
+  });
+  reader.readAsDataURL(this.files[0]);
 });
 
 // Edit card color

@@ -5,11 +5,11 @@
 }
 
 :root {
-  --sky-blue-color: rgb(115, 218, 255); 
+  --sky-blue-color: rgb(115, 218, 255);
   --dark-blue-color: rgb(67, 67, 102);
-  --card-sky-blue-color: rgb(115, 218, 255); 
+  --card-sky-blue-color: rgb(115, 218, 255);
   --card-dark-blue-color: rgb(67, 67, 102);
-  --grey-color: rgb(168, 164, 164);
+  --grey-color: rgb(121, 0, 0);
   --grey-box-shadow: rgb(179, 175, 175);
 }
 
@@ -123,7 +123,7 @@ body {
 
 /* Color container */
 .color-container {
- text-align: center;
+  text-align: center;
 }
 
 #select-color {
@@ -131,7 +131,7 @@ body {
   height: 30px;
   margin: 20px;
   width: 80px;
-  box-shadow:  0 0 10px var(--card-dark-blue-color);
+  box-shadow: 0 0 10px var(--card-dark-blue-color);
 }
 
 /* Card proper */
@@ -164,7 +164,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-transform: uppercase; ;
+  text-transform: uppercase;
+}
+
+#person-img {
+  border-radius: 50%;
+  width: 90px;
+  height: 80px;
 }
 
 .company-name {
