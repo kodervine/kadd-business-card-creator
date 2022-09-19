@@ -27,6 +27,16 @@
       </section>
       <!-- Form -->
       <form class="form">
+        <!-- Photo -->
+        <div>
+          <label for="my-photo">Select a file:</label>
+          <input
+            type="file"
+            id="my-photo"
+            name="my-photo"
+            accept="image/png, image/jpg, image/jpeg"
+          />
+        </div>
         <!-- Name -->
         <div class="form-div">
           <label>Full name</label>
@@ -86,7 +96,11 @@
       <!-- Canvas -->
       <article class="card-container" id="download-card">
         <div class="card-header">
-          <img src="/images/kadd-logo.png" alt="logo image here" />
+          <img
+            src="/images/kadd-logo.png"
+            alt="logo image here"
+            id="hide-logo"
+          />
           <p class="company-name"></p>
         </div>
         <div class="body">
