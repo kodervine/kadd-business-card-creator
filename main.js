@@ -8,6 +8,7 @@ const formCompanyName = document.getElementById("company-name");
 const formPhoneNumber = document.getElementById("phone-number");
 const formEmailAddress = document.getElementById("email-address");
 const formOfficeAddress = document.getElementById("office-address");
+const myPhoto = document.getElementById("my-photo");
 
 // CardItself
 const companyName = document.querySelector(".company-name");
@@ -16,6 +17,18 @@ const jobTitle = document.querySelector(".job-title");
 const phoneNumber = document.querySelector(".phone-number");
 const emailAddress = document.querySelector(".email-address");
 const companyAddress = document.querySelector(".address");
+let imgUploader = "";
+
+// Allows you to upload your image
+const cardPhotoSpot = document.querySelector(".card-header");
+myPhoto.addEventListener("change", function () {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    imgUploader = reader.result;
+    document.querySelector("#person-img").src = `${imgUploader}`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
 
 // Color and card container
 const cardContainer = document.querySelector(".card-container");
