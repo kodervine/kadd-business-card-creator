@@ -1,5 +1,6 @@
 # kadd-business-card-creator
 Business card creator
+Link to live site - https://kadd.netlify.app/
 Documentation
 Added to card
 Validated if card already has input 
