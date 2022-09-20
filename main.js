@@ -89,42 +89,10 @@ function addToCard(formInput, appendText) {
     }, 1000);
   }
   const refreshPageAlert = document.querySelector(".refresh-page");
-<<<<<<< HEAD
+
   appendText.innerText = formInput.value;
   formInput.value = "";
-=======
-  if (appendText.innerText !== "") {
-    appendText.appendChild = "none";
-    formInput.value = "";
-    // Alert to refresh page
-    refreshPageAlert.classList.remove("display-none");
-    appendText.value = "";
-    formContainer.classList.remove("display-none");
-
-    // Remove red alert
-    setTimeout(() => {
-      refreshPageAlert.classList.add("display-none");
-    }, 1000);
-  } else {
-    // Add form input value to the card itself
-    const createParagraph = document.createElement("p");
-    createParagraph.innerText = formInput.value;
-
-    appendText.appendChild(createParagraph);
-    formInput.value = "";
-
-    // Hide the form after the create card button is clicked === currently affecting the whole form whether the input is clear
-    formContainer.classList.add("display-none");
-    createCard.classList.add("display-none");
-    // colorContainer.classList.remove("display-none");
-    // cardContainer.classList.remove("display-none");
-    // recreateCard.classList.remove("display-none");
-    // downloadCard.classList.remove("display-none");
-    // customizeCard.classList.remove("display-none");
-  }
->>>>>>> ecd4edce30d90074b40ac36b788530cc92a886c3
 }
-
 // Create card button after form input
 const createCard = document.querySelector(".create-card");
 createCard.addEventListener("click", () => {
