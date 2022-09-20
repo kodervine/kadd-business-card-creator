@@ -131,14 +131,17 @@ cardContainer.addEventListener("click", () => {
   colorContainer.classList.remove("display-none");
   displayCustomizeText.classList.add("display-none");
   const rootVariables = document.querySelector(":root");
-  rootVariables.style.setProperty(
-    "--card-sky-blue-color",
-    selectThemeColor.value
-  );
-  rootVariables.style.setProperty(
-    "--card-dark-blue-color",
-    selectThemeColor.value
-  );
+  // Change color based on color input selection
+  selectThemeColor.addEventListener("input", () => {
+    rootVariables.style.setProperty(
+      "--card-sky-blue-color",
+      selectThemeColor.value
+    );
+    rootVariables.style.setProperty(
+      "--card-dark-blue-color",
+      selectThemeColor.value
+    );
+  });
 });
 
 // convert the input value and convert to png
