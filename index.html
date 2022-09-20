@@ -66,6 +66,16 @@
           <label>Address</label>
           <input type="text" name="office-address" id="office-address" />
         </div>
+        <!-- Select for photo -->
+        <div>
+          <label for="my-photo">Select file for picture:</label>
+          <input
+            type="file"
+            id="my-photo"
+            name="my-photo"
+            accept="image/png, image/jpg, image/jpeg"
+          />
+        </div>
       </form>
 
       <!-- button -->
@@ -86,7 +96,11 @@
       <!-- Canvas -->
       <article class="card-container" id="download-card">
         <div class="card-header">
-          <img src="/images/kadd-logo.png" alt="logo image here" />
+          <img
+            src="/images/kadd-logo.png"
+            alt="logo image here"
+            id="person-img"
+          />
           <p class="company-name"></p>
         </div>
         <div class="body">
@@ -111,6 +125,7 @@
       </article>
     </main>
 
+    <br /><br />
     <section class="down-button">
       <button class="create-another-card">Recreate card</button>
       <button class="download-card">Download card</button>
