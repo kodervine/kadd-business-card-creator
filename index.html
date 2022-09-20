@@ -12,21 +12,53 @@
     <title>Kadd - business card creator</title>
   </head>
   <body>
-    <header class="header">
-      <h1>Kadd</h1>
-      <p>Create your customized business cards in seconds</p>
-    </header>
+    <section class="header">
+      <header class="header-container">
+        <img src="/images/kadd-logo.png" alt="kadd-logo" />
+        <ul class="navbar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#create-invoice">Get Started</a></li>
+        </ul>
+      </header>
 
+      <section class="showcase-container">
+        <div>
+          <h1>Kadd - Create & Share professional business cards online</h1>
+          <p>
+            Design professional business cards within seconds. Choose and
+            customize it through our simple interface. Share with your network
+            instantly
+          </p>
+          <button class="create-bizcard" id="create-bizcard">
+            Get started
+          </button>
+        </div>
+
+        <!-- Right side -->
+        <div class="showcase-image">
+          <video width="500" height="500" autoplay="autoplay">
+            <source
+              src="/videos/animated_vertt-dribble-video.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </section>
+    </section>
+
+    <!-- Form proper -->
     <main>
       <section class="red-alert display-none">
         <p>Please fill in the forms to continue</p>
       </section>
 
-      <section class="display-none refresh-page">
-        <p>Please refresh page to create another card</p>
-      </section>
       <!-- Form -->
       <form class="form">
+        <h3 style="padding-bottom: 15px; text-align: center">
+          Please fill in the forms to continue
+        </h3>
         <!-- Name -->
         <div class="form-div">
           <label>Full name</label>
@@ -78,7 +110,7 @@
         </div>
       </form>
 
-      <!-- button -->
+      <!-- button to create business card -->
       <section class="create-card-btn-container">
         <button class="create-card">create card</button>
       </section>
