@@ -13,9 +13,9 @@ const formOfficeAddress = document.getElementById("office-address");
 const companyName = document.querySelector(".company-name");
 const personName = document.querySelector(".person-name");
 const jobTitle = document.querySelector(".job-title");
-const phoneNumber = document.querySelector(".phone-number");
-const emailAddress = document.querySelector(".email-address");
-const companyAddress = document.querySelector(".address");
+const phoneNumber = document.querySelector("#card-phone-number");
+const emailAddress = document.querySelector("#card-email-address");
+const companyAddress = document.querySelector("#card-address");
 
 // Color and card container
 const cardContainer = document.querySelector(".card-container");
@@ -84,33 +84,9 @@ function addToCard(formInput, appendText) {
       redAlert.classList.add("display-none");
     }, 1000);
   }
-
-  // Make sure nothing is in text before adding anything
   const refreshPageAlert = document.querySelector(".refresh-page");
-  if (appendText.innerText !== "") {
-    appendText.appendChild = "none";
-    formInput.value = "";
-    // Alert to refresh page
-    refreshPageAlert.classList.remove("display-none");
-    appendText.value = "";
-    formContainer.classList.remove("display-none");
-
-    // Remove red alert
-    setTimeout(() => {
-      refreshPageAlert.classList.add("display-none");
-    }, 1000);
-  } else {
-    // Add form input value to the card itself
-    const createParagraph = document.createElement("p");
-    createParagraph.innerText = formInput.value;
-
-    appendText.appendChild(createParagraph);
-    formInput.value = "";
-
-    // Hide the form after the create card button is clicked === currently affecting the whole form whether the input is clear
-    formContainer.classList.add("display-none");
-    createCard.classList.add("display-none");
-  }
+  appendText.innerText = formInput.value;
+  formInput.value = "";
 }
 
 // Create card button after form input
