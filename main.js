@@ -1,5 +1,6 @@
 // Define global variable
 const formContainer = document.querySelector(".form");
+const headerHomepage = document.querySelector(".header");
 
 // Forms input
 const formFullName = document.getElementById("full-name");
@@ -18,18 +19,32 @@ const phoneNumber = document.querySelector("#card-phone-number");
 const emailAddress = document.querySelector("#card-email-address");
 const companyAddress = document.querySelector("#card-address");
 
-// To change the card Color and card container
+// Variable of to change the card Color and card container
 const cardContainer = document.querySelector(".card-container");
 const colorContainer = document.querySelector(".color-container");
 
-// Windows loaded
+// Immediately on Windows loaded logic
 const customizeCard = document.querySelector(".click-card-info");
 document.addEventListener("DOMContentLoaded", () => {
   colorContainer.classList.add("display-none");
-  // cardContainer.classList.add("display-none");
-  // recreateCard.classList.add("display-none");
-  // downloadCard.classList.add("display-none");
-  // customizeCard.classList.add("display-none");
+  cardContainer.classList.add("display-none");
+  createCard.classList.add("display-none");
+  recreateCard.classList.add("display-none");
+  downloadCard.classList.add("display-none");
+  customizeCard.classList.add("display-none");
+  formContainer.classList.add("display-none");
+});
+
+// Click button for form to show on screen.
+const createBizCardButton = document.getElementById("create-bizcard");
+createBizCardButton.addEventListener("click", () => {
+  cardContainer.classList.remove("display-none");
+  createCard.classList.remove("display-none");
+  recreateCard.classList.remove("display-none");
+  downloadCard.classList.remove("display-none");
+  customizeCard.classList.remove("display-none");
+  formContainer.classList.remove("display-none");
+  headerHomepage.classList.add("display-none");
 });
 
 // Validate number on the form
