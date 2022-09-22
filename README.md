@@ -2,41 +2,48 @@
 Business card creator
 Link to live site - https://kadd.netlify.app/
 Documentation
-Added to card
-Validated if card already has input 
-Validated numbers
-Still trying to validate email address 
+** On DOM Content Loaded 
+So, on loading the website (DOM content Loaded), I added the "display-none" to major sections apart from the simple homepage that I designed.
 
-Add to card function ()
+** Get Started
+Next is clicking of the Get Started button with the variable - createBizCardButton on the homepage. When that happens, it hides content of the home page, and displays the other sections that I'd hidden on-Load
 
-***Validation**"
-I added display none to the form itself
-Also added display none to the create card button 
-However, it's affecting the whole form even the validation 
+**Validation
+I used Regular expression for the core of the validation. That is to ensure that the number input is both a number primitive type, and isn't more than 11
+
+However, there's actually no real implementation of preventing the form from being submitted 
+
+// Add to business card function
+The "addToCard" button takes in 2 input - the value of the form, and the placeholder where the value will be inserted
+So first, I had to authenticate empty input on the form to display the red-alert banner, and used setTimeout to get hide the banner 
+
+Then I selected the card Placeholder from the html, and set the formInput.value to the innerText of the appendText.
+Then, cleared the value of the formInput after that
+
+** Create Card event listener 
+Because I had already defined the addToCard function, I merely called it in the createCard event listener.
+The createCard is a button. So when the button is clicked, it executes the addToCard function for all the formInput 
+
+** Change business card color function 
+ I created an input in the HTML file with the color input type.
+Then, I selected it from the JavaScript and saved to a variable - "selectThemeColor" 
+After, I added an event listener to the entire "cardContainer" itself.
+
+ When it's clicked, it shows the "customizeCard" section with instruction on how to edit the theme color.
+
+ Then I selected the ":root" class from the CSS file and set it to a variable - "rootVariables" 
+When the card container is clicked, I set the :rootValue property of a specific CSS variable to the "colorInput" value the person had chosen 
+
+** Reload page
+
+For this function, when "recreateCard" button is clicked, I added "document.location.reload( )"
+This easily refreshes the page. 
+
+** Image uploader
+I set an input to the html with a type of "file"
+Then I added an event listener of "change" to the myPhoto input.
+Then I used the new File Reader to set the results of the file input to display on the card
 
 
-Change business card colour function
-I created an input on the HTML file with the color input type
-Then, I selected it in JavaScript and saved to a variable - selectThemeColor
-Then I added an event listener to the card container itself
-When it's clicked, it shows the Customize card section with instruction on how to edit the theme color
-Then I selected the :root class from the CSS file and set it to a variable - rootVariables
-When the card container is clicked, I set the :rootValue property of a specific CSS variable to the color input variable
-
-***
-Reload page on click of - recreateCard button
-I discovered that adding - "document.location.reload( )" will refresh the page
-So I added it as an event listener to the recreateCard button 
-****
-Convert to image
-Two things were involved
-I changed the article tag to canvas in order to create the src link
-
-So I selected the business card container (now under canvas) 
-Then I created a variable called dataURL and assigned it to the business cardContainer.toDataURL
-The dataURL is supposed to convert the canvas to a url
-
-Then, I created an image course on the html file
-This image source now had dataURL added to the source code (SRC)
-
-It succeeded in creating the canvas. Unfortunately, a canvas is not supposed to have HTML elements added to it. So that's the bug for now. But at least, there is improvement 
+** Select the input value and convert to png
+For this function, I used the html2canvas library to take a screenshot of the "cardContainer" section, and convert to dataURL to be able to download it
