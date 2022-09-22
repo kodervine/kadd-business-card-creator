@@ -2,18 +2,19 @@
 Business card creator
 Link to live site - https://kadd.netlify.app/
 Documentation
-** On DOM Content Loaded 
+
+## On DOM Content Loaded 
 So, on loading the website (DOM content Loaded), I added the "display-none" to major sections apart from the simple homepage that I designed.
 
-** Get Started
+## Get Started
 Next is clicking of the Get Started button with the variable - createBizCardButton on the homepage. When that happens, it hides content of the home page, and displays the other sections that I'd hidden on-Load
 
-**Validation
+## Validation
 I used Regular expression for the core of the validation. That is to ensure that the number input is both a number primitive type, and isn't more than 11
 
 However, there's actually no real implementation of preventing the form from being submitted 
 
-// Add to business card function
+### Add to business card function
 The "addToCard" button takes in 2 input - the value of the form, and the placeholder where the value will be inserted
 So first, I had to authenticate empty input on the form to display the red-alert banner, and used setTimeout to get hide the banner 
 
