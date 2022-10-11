@@ -9,163 +9,208 @@
       crossorigin="anonymous"
     ></script>
     <link rel="icon" type="image/png" href="/images/kadd-logo.png" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Kadd - business card creator</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="/javascript/home.js" defer></script>
+    <title>Kadd | create your business card </title>
   </head>
-  <body>
-    <section class="header">
-      <header class="header-container">
-        <img src="/images/kadd-logo.png" alt="kadd-logo" />
-        <ul class="navbar">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#create-invoice">Get Started</a></li>
-        </ul>
-      </header>
 
-      <section class="showcase-container">
-        <div>
-          <h1>Kadd - Create & Share professional business cards online</h1>
-          <p>
-            Design professional business cards within seconds. Choose and
-            customize it through our simple interface. Share with your network
-            instantly
-          </p>
-          <button class="create-bizcard" id="create-bizcard">
-            Get started
-          </button>
-        </div>
+  <body class="header">
+    <header class="header-container">
+      <img src="/images/kadd-logo.png" alt="kadd-logo" />
+      <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#create-invoice" class="create-invoice">Get Started</a></li>
+      </ul>
+      <div class="navbar-menu-icon active"><i class="fa-solid fa-bars"></i></div>
+      <div class="navbar-delete-icon"><i class="fa-solid fa-x"></i></div>
+    </header>
 
-        <!-- Right side -->
-        <div class="showcase-image">
-          <video width="500" height="500" autoplay="autoplay">
-            <source
-              src="/videos/animated_vertt-dribble-video.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </section>
+    <section class="mobile-navbar-container">
+      <ul class="mobile-navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="/html/form.html" class="create-invoice">Get Started</a></li>
+      </ul>
     </section>
 
-    <!-- Form proper -->
-    <main>
-      <section class="red-alert display-none">
-        <p>Please fill in the forms to continue</p>
-      </section>
+    <!-- First arrow links -->
+    <img src="/images/kadd-downward arrow.png" data-aos="fade-down" alt="downward-arrow" id="downward-arrow">
+    <section class="showcase-container">
+      
+      <!-- Left side -->
+      <div class="showcase-hero-text-div"  data-aos="fade-right" data-aos-once="true">
+        <h1>Kadd - Create & Share professional business cards online</h1>
+        <p>
+          Design professional business cards within seconds. Choose and
+          customize it through our simple interface. Share with your network
+          instantly
+        </p>
+        <button class="create-invoice" id="create-invoice"><a href="/html/form.html">Get started</a></button>
+      </div>
+      </div>
+      <!-- Right side -->
+      <div class="showcase-image" data-aos="fade-left" data-aos-once="true">
+        <img src="/images/kadd-hero-person.svg" class="revealXplus" alt="" />
+        <a href="https://storyset.com/people"
+        style="color: white; display: none;" d>People illustrations by Storyset</a
+        >
+      </div>
+    </section>
 
-      <!-- Form -->
-      <form class="form">
-        <h3 style="padding-bottom: 15px; text-align: center">
-          Please fill in the forms to continue
-        </h3>
-        <!-- Name -->
-        <div class="form-div">
-          <label>Full name</label>
-          <input type="text" name="full-name" id="full-name" />
-        </div>
-        <!-- Title -->
-        <div class="form-div">
-          <label>Title</label>
-          <input type="text" name="job-title" id="job-title" />
-        </div>
-        <!-- Company name -->
-        <div class="form-div">
-          <label>Company Name</label>
-          <input type="text" name="company-name" id="company-name" />
-        </div>
-        <!-- Phone Number -->
-        <div class="form-div">
-          <label>Phone Number</label>
-          <input type="number" name="phone-number" id="phone-number" />
-          <p class="valid-phone-num display-none">
-            Please enter a valid number to continue
-          </p>
-          <p class="phone-num-length display-none">
-            Your number should be 11 digits
-          </p>
-        </div>
-        <!-- Email address -->
-        <div class="form-div">
-          <label>Email Address</label>
-          <input type="email" name="email-address" id="email-address" />
-          <p class="valid-email-address display-none">
-            Please enter a valid email address to continue
-          </p>
-        </div>
-        <!-- Address -->
-        <div class="form-div">
-          <label>Address</label>
-          <input type="text" name="office-address" id="office-address" />
-        </div>
-        <!-- Select for photo -->
-        <div>
-          <label for="my-photo">Select file for picture:</label>
-          <input
-            type="file"
-            id="my-photo"
-            name="my-photo"
-            accept="image/png, image/jpg, image/jpeg"
-          />
-        </div>
+    <!-- second arrow links -->
+    <div class="curved-arrow-container">
+      <img src="/images/kadd-curved-arrow.png" alt="curved-arrow" id="curved-arrow" data-aos="fade-up">
+    </div>
+
+    <!-- services offered section -->
+    <section class="services-offered-header">
+      <p>How this works</p>
+      <h3>How you create your business card</h3>   
+    </section>
+
+    <!-- Prelude to Grid section - svgs -->
+    <article class="article-container-grid">
+       <!-- third arrow svgs links -->
+        <img src="/images/kadd-circle-dots.svg" alt="circledots-arrow" id="circledots-arrow" data-aos="fade-down">
+         <!-- fourth arrow svgs links -->
+        <img src="/images/kadd-red-line-circle.svg" alt="redline-circle-arrow" id="redline-circle-arrow" data-aos="fade-up">
+      
+
+      <!-- Services offered grid section -->
+    <section class="services-offered--grid-container">
+      <!-- First grid -->
+      <div class="services-offered-grid-item " data-aos="fade-right" data-aos-once="true">
+        <p>icon</p>
+        <h4>Product management</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, iusto?</p>
+      </div>
+      <!-- Second grid -->
+      <div class="services-offered-grid-item" data-aos="fade-right" data-aos-once="true">
+        <p>icon</p>
+        <h4>Product management</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, iusto?</p>
+      </div>
+      <!-- Third grid -->
+      <div class="services-offered-grid-item " data-aos="fade-left" data-aos-once="true">
+        <p>icon</p>
+        <h4>Product management</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, iusto?</p>
+      </div>
+      <!-- Fourth grid -->
+      <div class="services-offered-grid-item" data-aos="fade-left" data-aos-once="true">
+        <p>icon</p>
+        <h4>Product management</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, iusto?</p>
+      </div>
+    </section>
+
+    <!-- fourth arrow svg links to be absolute -->
+    <img src="/images/kadd-blue-dot-rectangle.svg" alt="bluedot-retangle" id="bluedot-retangle" >
+    </article>
+
+    <!-- 5th right-inward arrow -->
+      <img src="/images/kadd-leftslope-arrow.png" alt="leftslope-arrow" id="leftslope-arrow">
+
+    <section class="showcase-container" data-aos="fade-right" data-aos-once="true">
+      <!-- left side -->
+      <div class="showcase-image">
+        <img src="/images/kadd-ID Card-cuate.svg" alt="second ID" />
+        <a href="https://storyset.com/people" style="color: white;">People illustrations by Storyset</a>
+      </div>
+      <!-- right side -->
+      <div class="showcase-hero-text-div">
+        <p id="customize-showcase-2">Customize</p>
+        <h1>Choose any theme of your choice</h1>
+        <p>
+          Design professional business cards within seconds. Choose and
+          customize it through our simple interface. Share with your network
+          instantly
+        </p>
+        <button class="create-invoice" id="create-invoice"><a href="/html/form.html">Get started</a></button>
+      </div>
+      </div>
+    </section>
+
+    <!-- 6th right-inward arrow -->
+    <img src="/images/kadd-upwardarrow.png" alt="upwardarrow" id="upwardarrow" data-aos="fade-up">
+
+    <!-- Sign up form container -->
+    <section class="newsletter-form-container" data-aos-once="true" data-aos="fade-down">
+      
+      <!-- svg for form links -->
+      <img src="/images/kadd-circle-dots.svg" alt="circledots-arrow" id="circledots-arrow-below" >
+
+      <!-- Join our community container -->
+      <div class="newsletter-form-text-div">
+        <h5>Join our community</h5>
+        <h3>Subscribe to our newsletter</h3>
+        <p>Enter your email to be the first to be on the know about our exciting features when they are launched</p>
+      </div>
+
+      <!-- Form proper -->
+      <form action="" class="newsletter-form">
+        <input type="email" placeholder="Enter your Email" name="" id="">
+        <button>Sign up</button>
       </form>
-
-      <!-- button to create business card -->
-      <section class="create-card-btn-container">
-        <button class="create-card">create card</button>
-      </section>
-
-      <!-- Customize colors -->
-      <section class="color-container">
-        <h3>Customize Card Color</h3>
-        <p>Choose a color below and click on the business card to customize</p>
-        <input type="color" name="color" id="select-color" />
-      </section>
-
-      <!-- Section -->
-      <p class="click-card-info">Click on card to customize</p>
-
-      <!-- Canvas -->
-      <article class="card-container" id="download-card">
-        <div class="card-header">
-          <img
-            src="/images/kadd-logo.png"
-            alt="logo image here"
-            id="person-img"
-          />
-          <p class="company-name"></p>
-        </div>
-        <div class="body">
-          <h4 class="person-name"></h4>
-          <p class="job-title"></p>
-          <!-- First for phone number -->
-          <div class="phone-number">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <p id="card-phone-number"></p>
-          </div>
-          <!-- Email address -->
-          <div class="email-address">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            <p id="card-email-address"></p>
-          </div>
-          <!-- Third for address -->
-          <div class="address">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
-            <p id="card-address"></p>
-          </div>
-        </div>
-      </article>
-    </main>
-
-    <br /><br />
-    <section class="down-button">
-      <button class="create-another-card">Recreate card</button>
-      <button class="download-card">Download card</button>
-      <a href="#" id="download-link" download="MyBusinessCard.png"></a>
     </section>
+    
+    <!-- Footer section -->
+    <footer class="footer" data-aos="fade-up" data-aos-once="true">
+      <!-- svg for form links -->
+      <img src="/images/kadd-red-line-circle.svg" alt="circledots-arrow" id="redline-arrow-below">
+      <!-- First div -->
+      <div>
+        <h4>Kadd business creator</h4>
+        <p>Design professional business cards within seconds. Share with your network instantly</p>
+        <div class="footer-socialmedia-icons">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-square-twitter"></i>
+        </div>
+      </div>
 
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script src="/main.js"></script>
+      <!-- Second div -->
+      <div>
+        <h4>Quick links</h4>
+        <p><a href="#">Home</a></p>
+        <p><a href="#">Services</a></p>
+        <p><a href="#">About</a></p>
+        <p><a href="#">Contact</a></p>
+      </div>
+
+      <!-- Third div -->
+      <div>
+        <h4> Let's talk</h4>
+        <p><i class="fa-regular fa-envelope"></i>    support@kadd.com</p>
+        <p> <i class="fa-solid fa-phone"></i> +(234)70 6472 1930</p>
+      </div>
+
+      <!-- 4th div -->
+      <div>
+        <h4>Office Address</h4>
+        <p> <i class="fa-solid fa-location-dot"></i> University of Nigeria, Nsukka</p>
+      </div>
+
+      <!-- svg for form links -->
+      <img src="/images/kadd-blue-dot-rectangle.svg" alt="circledots-arrow" id="bluedot-arrow-below">
+    </footer>
+
+    <div id="footer-year">
+
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 400,
+        duration: 1000
+      });
+    </script>
   </body>
 </html>
+
+
