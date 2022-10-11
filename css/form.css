@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --sky-blue-color: rgb(115, 218, 255);
+  --dark-blue-color: rgb(67, 67, 102);
+  --card-sky-blue-color: rgb(115, 218, 255);
+  --card-dark-blue-color: rgb(67, 67, 102);
+  --grey-color: #696969;
+  --grey-box-shadow: rgb(179, 175, 175);
+  --darkest-blue: #001b48;
+  --dark-blue: #024571;
+  --light-blue: #06e9ee;
+}
+
+body {
+  font-family: "Lato", Helvetica, sans-serif;
+  color: var(--dark-blue-color);
+  font-size: 20px;
+  font-weight: 500px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  padding: 0 40px;
+  box-shadow: 0 15px 10px -2px wheat;
+}
+
+.header img {
+  width: 120px;
+  cursor: pointer;
+  align-self: center;
+  z-index: -1;
+}
+
+.header-container .navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.header-container .navbar li {
+  list-style: none;
+  padding: 10px;
+}
+
+.header-container .navbar a {
+  text-decoration: none;
+  color: var(--grey-color);
+}
+
+.header-container .navbar li:hover {
+  color: var(--darkest-blue);
+  transform: translateY(-1px);
+  transition: 0.5s ease;
+}
+
+.header-container .navbar li:last-of-type {
+  border: 2px solid var(--grey-box-shadow);
+  border-radius: 5px;
+}
+
+.header button {
+  padding: 15px;
+  margin: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: transparent;
+  border: 3px solid var(--grey-color);
+  color: var(--darkest-blue);
+}
+
+.header button:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in;
+}
+
+/* Form */
+.form {
+  width: 40%;
+  border: 2px solid grey;
+  margin: auto;
+  padding: 30px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+/* Form */
+.form-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-div input {
+  border: none;
+  border-bottom: 1px solid grey;
+  padding: 8px 0 5px 0;
+  margin: 5px 0 5px 0;
+  outline: none;
+  background-color: transparent;
+}
+
+.form-div label {
+  text-align: left;
+}
+
+.form-div input:focus {
+  border: 2px solid grey;
+  box-shadow: 1px 1px 1px var(--grey-box-shadow);
+  border-radius: 8px;
+}
+
+/* Number length and validation */
+.valid-phone-num,
+.phone-num-length,
+.valid-email-address {
+  font-size: 13px;
+  padding-top: 3px;
+  margin: 2px;
+  color: red;
+}
+
+/* Button */
+.create-card-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-card,
+.create-another-card,
+.download-card {
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--grey-color);
+  border: 2px solid var(--grey-color);
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.download-card,
+.create-another-card {
+  margin: 0;
+  /* margin-left: 20px; */
+}
+
+.create-card:hover,
+.create-another-card:hover,
+.download-card:hover {
+  transition: 0.5s ease-in;
+  box-shadow: 0 0 10px var(--grey-box-shadow);
+  transform: scale(1.07);
+}
+
+.down-button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Red alert */
+.red-alert,
+.refresh-page {
+  position: sticky;
+  top: 50%;
+  background-color: red;
+  color: white;
+  width: 40%;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+  font-size: 25px;
+}
+
+/* Color container */
+.color-container {
+  text-align: center;
+}
+
+#select-color {
+  cursor: pointer;
+  height: 30px;
+  margin: 20px;
+  width: 80px;
+  box-shadow: 0 0 10px var(--card-dark-blue-color);
+}
+
+/* Card proper */
+.click-card-info {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.card-container {
+  width: 388px;
+  height: 248px;
+  border: 5px solid var(--card-dark-blue-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 15px 0 15px;
+  margin: auto;
+  background-image: url(/images/kadd-logo-transparent.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  cursor: pointer;
+}
+
+.card-container:hover {
+  box-shadow: 0 0 10px var(--grey-box-shadow);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+#person-img {
+  border-radius: 50%;
+  width: 90px;
+  height: 80px;
+}
+
+.company-name {
+  font-weight: bold;
+}
+
+.card-header span {
+  font-size: 10px;
+}
+
+.card-header img {
+  width: 80px;
+}
+
+.person-name {
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: left;
+  /* color: var(--card-sky-blue-color); */
+}
+
+.job-title {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  color: var(--card-sky-blue-color);
+  text-align: left;
+}
+
+.phone-number,
+.email-address,
+.address {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 5px;
+  font-size: 13px;
+}
+
+.phone-number i,
+.email-address i,
+.address i {
+  color: var(--card-sky-blue-color);
+  border: 1px solid var(--card-sky-blue-color);
+  padding: 3px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+.address i {
+  padding: 5px;
+}
+
+.display-none {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 80%;
+  }
+
+  .red-alert,
+  .refresh-page {
+    width: 80%;
+    font-size: 16px;
+  }
+}
+
+/* Media query */
+@media (max-width: 798px) {
+  body {
+    font-size: 15px;
+  }
+
+  /* Header */
+  .header-container {
+    height: 10vh;
+    box-shadow: 0 15px 10px -2px whitesmoke;
+  }
+
+  .header img {
+    width: 100px;
+  }
+
+  .header-container .navbar {
+    flex-direction: column;
+    border: none;
+    /* display: none; */
+  }
+
+  .header-container .navbar li:last-of-type {
+    border: none;
+    border-bottom: 2px solid var(--grey-box-shadow);
+    border-radius: 5px;
+  }
+
+  .header-container .navbar li:hover {
+    transform: scale(1.02);
+    transition: 1s ease;
+  }
+
+  .showcase-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .showcase-container div:first-of-type {
+    flex: 1;
+    padding: 30px;
+    width: 100%;
+  }
+
+  .showcase-container h1 {
+    font-size: 25px;
+  }
+
+  .showcase-image video {
+    height: 100%;
+  }
+}
