@@ -249,6 +249,31 @@ body {
   color: darkgray;
 }
 
+.services-offered-grid-item .grid-icon {
+  background-color: #024571;
+  width: 3rem;
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+.services-offered-grid-item:nth-of-type(2) .grid-icon {
+  background-color: maroon;
+}
+.services-offered-grid-item:nth-of-type(3) .grid-icon {
+  background-color: darkorange;
+}
+.services-offered-grid-item:nth-of-type(4) .grid-icon {
+  background-color: darkgreen;
+}
+
+.services-offered-grid-item:hover .grid-icon {
+  opacity: 1;
+}
+
 /* Services offered svg */
 
 #circledots-arrow {
@@ -537,6 +562,7 @@ body {
   .services-offered-grid-item {
     height: auto;
     width: auto;
+    padding: auto;
   }
 
   .services-offered-grid-item h4 {
