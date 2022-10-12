@@ -497,6 +497,7 @@ body {
 
   .showcase-container h1 {
     font-size: 30px;
+    padding-bottom: 10px;
   }
 
   .showcase-hero-text-div button {
@@ -513,7 +514,7 @@ body {
 
   /* Curved arrow */
   .curved-arrow-container {
-    height: 30vh;
+    height: 8rem;
   }
   #curved-arrow {
     width: 40vw;
@@ -540,6 +541,7 @@ body {
 
   .services-offered-grid-item h4 {
     font-size: 25px;
+    padding-bottom: 10px;
   }
 
   /* Services offered svg */
@@ -577,11 +579,16 @@ body {
 
   .newsletter-form-text-div h3 {
     font-size: 30px;
+    padding-bottom: 15px;
     margin: auto;
   }
 
   .newsletter-form-text-div h5 {
     font-size: 20px;
+  }
+
+  .newsletter-form-text-div p {
+    padding: 0 30px;
   }
 
   /* Newsletter form */
