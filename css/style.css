@@ -249,6 +249,31 @@ body {
   color: darkgray;
 }
 
+.services-offered-grid-item .grid-icon {
+  background-color: #024571;
+  width: 3rem;
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+.services-offered-grid-item:nth-of-type(2) .grid-icon {
+  background-color: maroon;
+}
+.services-offered-grid-item:nth-of-type(3) .grid-icon {
+  background-color: darkorange;
+}
+.services-offered-grid-item:nth-of-type(4) .grid-icon {
+  background-color: darkgreen;
+}
+
+.services-offered-grid-item:hover .grid-icon {
+  opacity: 1;
+}
+
 /* Services offered svg */
 
 #circledots-arrow {
@@ -497,6 +522,7 @@ body {
 
   .showcase-container h1 {
     font-size: 30px;
+    padding-bottom: 10px;
   }
 
   .showcase-hero-text-div button {
@@ -513,7 +539,7 @@ body {
 
   /* Curved arrow */
   .curved-arrow-container {
-    height: 30vh;
+    height: 8rem;
   }
   #curved-arrow {
     width: 40vw;
@@ -522,10 +548,9 @@ body {
   /* Services offered grid header*/
   .services-offered-header {
     width: 100%;
-    min-width: 400px;
   }
   .services-offered-header h3 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   /* Services offered grid container */
@@ -537,10 +562,12 @@ body {
   .services-offered-grid-item {
     height: auto;
     width: auto;
+    padding: auto;
   }
 
   .services-offered-grid-item h4 {
     font-size: 25px;
+    padding-bottom: 10px;
   }
 
   /* Services offered svg */
@@ -561,7 +588,7 @@ body {
   }
 
   .newsletter-form-container {
-    height: 70vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -578,11 +605,16 @@ body {
 
   .newsletter-form-text-div h3 {
     font-size: 30px;
+    padding-bottom: 15px;
     margin: auto;
   }
 
   .newsletter-form-text-div h5 {
     font-size: 20px;
+  }
+
+  .newsletter-form-text-div p {
+    padding: 0 30px;
   }
 
   /* Newsletter form */
@@ -595,10 +627,8 @@ body {
 
   .newsletter-form input {
     border: 1px solid blue;
-    padding: 25px 10px;
+    padding: 10px;
     width: 100%;
-    font-size: 20px;
-    font-weight: 400;
     border-radius: 40px;
   }
 
@@ -625,7 +655,7 @@ body {
   .footer {
     display: flex;
     flex-direction: column;
-    margin: 15px;
+    margin: 30px;
     padding: 30px 20px;
     height: auto;
     text-align: left;
@@ -639,7 +669,8 @@ body {
   }
 
   #redline-arrow-below {
-    margin-top: -10px;
+    margin-top: -30px;
+    margin-right: 0;
   }
 
   #bluedot-arrow-below {
