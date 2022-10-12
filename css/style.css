@@ -522,10 +522,9 @@ body {
   /* Services offered grid header*/
   .services-offered-header {
     width: 100%;
-    min-width: 400px;
   }
   .services-offered-header h3 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   /* Services offered grid container */
@@ -561,7 +560,7 @@ body {
   }
 
   .newsletter-form-container {
-    height: 70vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -595,10 +594,8 @@ body {
 
   .newsletter-form input {
     border: 1px solid blue;
-    padding: 25px 10px;
+    padding: 10px;
     width: 100%;
-    font-size: 20px;
-    font-weight: 400;
     border-radius: 40px;
   }
 
@@ -625,7 +622,7 @@ body {
   .footer {
     display: flex;
     flex-direction: column;
-    margin: 15px;
+    margin: 30px;
     padding: 30px 20px;
     height: auto;
     text-align: left;
@@ -639,7 +636,8 @@ body {
   }
 
   #redline-arrow-below {
-    margin-top: -10px;
+    margin-top: -30px;
+    margin-right: 0;
   }
 
   #bluedot-arrow-below {
