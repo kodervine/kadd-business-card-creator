@@ -27,10 +27,11 @@
       </section>
 
       <!-- Form -->
+      <h3 style="text-align: center; margin-bottom: -20px; padding-top: 20px;">
+        Please fill in the forms to continue
+      </h3>
       <form class="form" autocomplete="off">
-        <h3 style="padding-bottom: 15px; text-align: center">
-          Please fill in the forms to continue
-        </h3>
+        
         <!-- Name -->
         <div class="form-div">
           <label>Full name</label>
@@ -68,7 +69,8 @@
         <!-- Address -->
         <div class="form-div">
           <label>Address</label>
-          <input type="text" name="office-address" id="office-address" />
+          <input type="text" 
+          name="office-address" id="office-address" />
         </div>
         <!-- Select for photo -->
         <div>
@@ -80,6 +82,7 @@
             accept="image/png, image/jpg, image/jpeg"
           />
         </div>
+      
       </form>
 
       <!-- button to create business card -->
@@ -131,8 +134,8 @@
 
     <br /><br />
     <section class="down-button">
-      <button class="create-another-card">Recreate card</button>
-      <button class="download-card">Download card</button>
+      <button class="create-another-card" id="create-another-card-btn">Recreate card</button>
+      <button class="download-card" id="download-card-btn">Download card</button>
       <a href="#" id="download-link" download="MyBusinessCard.png"></a>
     </section>
 
